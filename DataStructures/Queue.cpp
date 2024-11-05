@@ -8,6 +8,8 @@ void initQueue(Queue* q, unsigned int size){
 	q->arr = queue;
 	q->length = size;
 	q->count = INITIAL_AMOUNT_ITEMS;
+	q->start = 0;
+	q->end = -1;
 }
 
 void cleanQueue(Queue* q){
@@ -17,13 +19,11 @@ void cleanQueue(Queue* q){
 
 /*
 The function adds an item to the queue by pushing it to the start
-Time: O(n) - n being the current amount of items in the queue
+Time: O(1)
 */
 void enqueue(Queue* q, unsigned int newValue){
-	for (int i = q->count;i > 0;i--) {
-		q->arr[i] = q->arr[i - 1];
-	}
-	q->arr[0] = newValue;
+	q->end = (q->end + 1) % q->length;
+	q->arr[q->end] = newValue;
 	q->count++;
 }
 
@@ -34,9 +34,10 @@ Time: O(1)
 int dequeue(Queue* q) {
 	int temp = 0;
 	if (q->count > 0) {
-		temp = q->arr[q->count - 1];
-		q->arr[q->count - 1] = 0;
+		temp = q->arr[q->start];
+		q->arr[q->start] = 0;
 		q->count--;
+		q->start = (q->start + 1) % q->length;
 		return temp;
 	}
 	else {

@@ -3,6 +3,7 @@
 
 #define QUEUE_SIZE 5
 
+
 int main() {
 	Queue* q = new Queue;
 	initQueue(q, QUEUE_SIZE);
@@ -15,6 +16,10 @@ int main() {
 	if (isFull(q)) {
 		std::cout << "Queue is full as expected" << std::endl;
 	}
+	dequeue(q);
+	std::cout << q->start << " - " << q->end << " - " << q->count  << std::endl;
+	enqueue(q, 1);
+	std::cout << q->start << " - " << q->end << " - " << q->count << std::endl;
 	while (!isEmpty(q)) {
 		std::cout << dequeue(q) << ", ";
 	}

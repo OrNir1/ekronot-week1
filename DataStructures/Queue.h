@@ -5,9 +5,10 @@
 /* a queue contains positive integer values. */
 typedef struct Queue
 {
-	// Complete the definition here
 	int* arr;
 	int count;
+	int start; //index of first in queue
+	int end; //index of last in queue
 	int length;
 } Queue;
 
