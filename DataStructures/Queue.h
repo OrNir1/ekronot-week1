@@ -6,7 +6,9 @@
 typedef struct Queue
 {
 	// Complete the definition here
-	
+	int* arr;
+	int count;
+	int length;
 } Queue;
 
 void initQueue(Queue* q, unsigned int size);
