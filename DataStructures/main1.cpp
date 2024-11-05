@@ -1,7 +1,9 @@
 #include "Queue.h"
+#include "LinkedList.h"
 #include <iostream>
 
 #define QUEUE_SIZE 5
+
 
 
 int main() {
@@ -23,9 +25,17 @@ int main() {
 	while (!isEmpty(q)) {
 		std::cout << dequeue(q) << ", ";
 	}
-	std::cout << std::endl;
+	std::cout << "\n\n" << std::endl;
 	cleanQueue(q);
 
+
+	ListNode* head = new ListNode;
+	head->next = NULL;
+	head->value = 1;
+	add(&head, 2);
+	std::cout << head->value << std::endl;
+	remove(&head);
+	std::cout << head->value << std::endl;
 	return 0;
 
 }
