@@ -134,9 +134,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="LinkedList.cpp" />
-    <ClCompile Include="main1.cpp" />
     <ClCompile Include="main2.cpp" />
-    <ClCompile Include="Part2Tester.cpp" />
     <ClCompile Include="Queue.cpp" />
     <ClCompile Include="Stack.cpp" />
     <ClCompile Include="Utils.cpp" />

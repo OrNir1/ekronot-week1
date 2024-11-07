@@ -13,11 +13,15 @@ void printArray(int* arr, int size) {
 	cout << endl;
 }
 
+
 int main() {
 	int nums[NUMS_SIZE] = { 1,2,3,4,5 };
 	printArray(nums, NUMS_SIZE);
 	reverse(nums, NUMS_SIZE);
 	printArray(nums, NUMS_SIZE);
+
+	int* arr = reverse10();
+	printArray(arr, 10);
 
 	return 0;
 }

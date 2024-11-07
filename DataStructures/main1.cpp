@@ -5,7 +5,7 @@
 #define QUEUE_SIZE 5
 
 
-/*
+
 int main() {
 	Queue* q = new Queue;
 	initQueue(q, QUEUE_SIZE);
@@ -39,4 +39,3 @@ int main() {
 	return 0;
 
 }
-*/

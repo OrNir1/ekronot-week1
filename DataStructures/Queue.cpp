@@ -8,7 +8,7 @@ This function initializes a queue of size 'size'
 Input: pointer to Queue struct 'q', integer 'size'
 */
 void initQueue(Queue* q, unsigned int size){
-	int *queue = new int[size];
+	int* queue = new int[size];
 	q->arr = queue;
 	q->length = size;
 	q->count = INITIAL_AMOUNT_ITEMS;

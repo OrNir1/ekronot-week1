@@ -1,5 +1,10 @@
 #include "Utils.h"
 
+#include <iostream>
+#include "Stack.h"
+
+#define REVERSE_10_SIZE 10
+
 void reverse(int* nums, unsigned int size){
 	Stack* s = new Stack;
 	initStack(s);
@@ -12,5 +17,11 @@ void reverse(int* nums, unsigned int size){
 }
 
 int* reverse10(){
-	return nullptr;
+	int* nums = new int[REVERSE_10_SIZE];
+	for (int i = 0;i < REVERSE_10_SIZE;i++) {
+		std::cout << "Enter num " << i + 1 << ": ";
+		std::cin >> nums[i];
+	}
+	reverse(nums, REVERSE_10_SIZE);
+	return nums;
 }
