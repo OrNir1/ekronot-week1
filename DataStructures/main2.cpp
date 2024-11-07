@@ -23,5 +23,6 @@ int main() {
 	int* arr = reverse10();
 	printArray(arr, 10);
 
+	delete[] arr;
 	return 0;
 }
