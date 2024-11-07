@@ -196,7 +196,7 @@ bool test3()
 		numbers[i] = (i+1) * 2;
 	}
 
-	//reverse(numbers, 10);
+	reverse(numbers, 10);
 	std::string reversedArray = "20 18 16 14 12 10 8 6 4 2";
 	std::string resultfromReverse = arrayToString(numbers, 10);
 	cout << "Using reverse() on array and printing it... " << endl
@@ -219,11 +219,12 @@ bool test3()
  			"\n\t\t\tYou are amazing!!!\n" ;
  }
 
-int main()
+ /*
+int main1()
 {
 	bool test1Result = test1();
 	bool test2Result = test2();
-	bool test3Result = true;
+	bool test3Result = test3();
 
 
 	if (test1Result && test2Result && test3Result)
@@ -243,3 +244,4 @@ int main()
 
 	return 0;
 }
+*/
