@@ -3,6 +3,10 @@
 #define INITIAL_AMOUNT_ITEMS 0
 #define EMPTY_DEQUEUE_RETURN -1
 
+/*
+This function initializes a queue of size 'size'
+Input: pointer to Queue struct 'q', integer 'size'
+*/
 void initQueue(Queue* q, unsigned int size){
 	int *queue = new int[size];
 	q->arr = queue;
@@ -12,10 +16,10 @@ void initQueue(Queue* q, unsigned int size){
 	q->end = -1;
 }
 
+/*This function cleans the queue by 'freeing' it*/
 void cleanQueue(Queue* q){
 	delete[] q->arr;
 }
-
 
 /*
 The function adds an item to the queue by pushing it to the start
@@ -45,11 +49,12 @@ int dequeue(Queue* q) {
 	}
 } 
 
+/*Checks if a queue is empty*/
 bool isEmpty(Queue* s){
 	return s->count == 0;
 }
 
-
+/*Checks if a queue is full*/
 bool isFull(Queue* s) {
 	return s->count == s->length;
 }
